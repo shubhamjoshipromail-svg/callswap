@@ -1,0 +1,232 @@
+{
+  "dataset": "massive",
+  "title": "MASSIVE (en-US)",
+  "model": "finetune",
+  "teacher": "gold labels (stand-in)",
+  "data_sha256": "59680485d1f1be424033f9d7a41676deac4c663d8b1ceeded694be9c3196738c",
+  "rows": 16521,
+  "labels": 60,
+  "duplicate_rows": 89,
+  "teacher_inconsistency_rows": 14,
+  "split": {
+    "train": 9936,
+    "calibration": 3305,
+    "sealed": 3280
+  },
+  "sealed_rows": 3280,
+  "seed": 7,
+  "min_coverage": 0.7,
+  "overall_accuracy": 0.8844512195121951,
+  "latency_ms": {
+    "p50": 20.3866250012652,
+    "p95": 26.563285097654443,
+    "samples": 100
+  },
+  "labels_unproven": 11,
+  "train_seconds": 1572.1862168330117,
+  "training": {
+    "winner": "finetune",
+    "selection_method": "single_candidate",
+    "base_model": "answerdotai/ModernBERT-base",
+    "device": "mps",
+    "epochs_run": 6,
+    "max_length": 24,
+    "training_seconds": 1572.0919221670047,
+    "candidates": [
+      "finetune"
+    ],
+    "train_rows": 9936
+  },
+  "bars": {
+    "0.99": {
+      "verdict": "FAIL",
+      "fail_reasons": [
+        "coverage 28.7% is below the minimum 70%",
+        "agreement lower bound 98.91% is below the target 99%"
+      ],
+      "coverage": 0.2871951219512195,
+      "agreement": 0.9957537154989384,
+      "agreement_lower_bound": 0.9891330023404535,
+      "accepted": 942,
+      "threshold": 0.993208110332489,
+      "temperature": 1.3409597530223756,
+      "target_met_on_calibration": true,
+      "calls_saved_per_1000": 287.1951219512195,
+      "monthly_saving_at_defaults": 410.79268292682923,
+      "weakest_labels": [
+        {
+          "label": "iot_wemo_on",
+          "count": 13,
+          "accepted": 1,
+          "accepted_disagreements": 1,
+          "coverage": 0.07692307692307693,
+          "agreement": 0.0
+        },
+        {
+          "label": "music_settings",
+          "count": 13,
+          "accepted": 1,
+          "accepted_disagreements": 1,
+          "coverage": 0.07692307692307693,
+          "agreement": 0.0
+        },
+        {
+          "label": "qa_factoid",
+          "count": 155,
+          "accepted": 31,
+          "accepted_disagreements": 1,
+          "coverage": 0.2,
+          "agreement": 0.967741935483871
+        },
+        {
+          "label": "news_query",
+          "count": 141,
+          "accepted": 66,
+          "accepted_disagreements": 1,
+          "coverage": 0.46808510638297873,
+          "agreement": 0.9848484848484849
+        },
+        {
+          "label": "audio_volume_down",
+          "count": 14,
+          "accepted": 0,
+          "accepted_disagreements": 0,
+          "coverage": 0.0,
+          "agreement": null
+        }
+      ],
+      "labels_never_accepted": 12
+    },
+    "0.95": {
+      "verdict": "FAIL",
+      "fail_reasons": [
+        "agreement lower bound 94.73% is below the target 95%"
+      ],
+      "coverage": 0.8265243902439025,
+      "agreement": 0.9557358908151974,
+      "agreement_lower_bound": 0.9473272386440311,
+      "accepted": 2711,
+      "threshold": 0.775498628616333,
+      "temperature": 1.3409597530223756,
+      "target_met_on_calibration": true,
+      "calls_saved_per_1000": 826.5243902439024,
+      "monthly_saving_at_defaults": 1219.7865853658536,
+      "weakest_labels": [
+        {
+          "label": "general_quirky",
+          "count": 164,
+          "accepted": 83,
+          "accepted_disagreements": 18,
+          "coverage": 0.5060975609756098,
+          "agreement": 0.7831325301204819
+        },
+        {
+          "label": "calendar_query",
+          "count": 158,
+          "accepted": 125,
+          "accepted_disagreements": 8,
+          "coverage": 0.7911392405063291,
+          "agreement": 0.936
+        },
+        {
+          "label": "qa_factoid",
+          "count": 155,
+          "accepted": 124,
+          "accepted_disagreements": 7,
+          "coverage": 0.8,
+          "agreement": 0.9435483870967742
+        },
+        {
+          "label": "news_query",
+          "count": 141,
+          "accepted": 116,
+          "accepted_disagreements": 6,
+          "coverage": 0.8226950354609929,
+          "agreement": 0.9482758620689655
+        },
+        {
+          "label": "music_settings",
+          "count": 13,
+          "accepted": 9,
+          "accepted_disagreements": 5,
+          "coverage": 0.6923076923076923,
+          "agreement": 0.4444444444444444
+        }
+      ],
+      "labels_never_accepted": 2
+    },
+    "0.90": {
+      "verdict": "FAIL",
+      "fail_reasons": [
+        "agreement lower bound 89.29% is below the target 90%"
+      ],
+      "coverage": 0.9679878048780488,
+      "agreement": 0.9036220472440945,
+      "agreement_lower_bound": 0.8928639183833788,
+      "accepted": 3175,
+      "threshold": 0.37414246797561646,
+      "temperature": 1.3409597530223756,
+      "target_met_on_calibration": true,
+      "calls_saved_per_1000": 967.9878048780488,
+      "monthly_saving_at_defaults": 1431.9817073170732,
+      "weakest_labels": [
+        {
+          "label": "general_quirky",
+          "count": 164,
+          "accepted": 144,
+          "accepted_disagreements": 44,
+          "coverage": 0.8780487804878049,
+          "agreement": 0.6944444444444444
+        },
+        {
+          "label": "calendar_query",
+          "count": 158,
+          "accepted": 154,
+          "accepted_disagreements": 23,
+          "coverage": 0.9746835443037974,
+          "agreement": 0.8506493506493507
+        },
+        {
+          "label": "qa_factoid",
+          "count": 155,
+          "accepted": 149,
+          "accepted_disagreements": 17,
+          "coverage": 0.9612903225806452,
+          "agreement": 0.8859060402684564
+        },
+        {
+          "label": "play_music",
+          "count": 187,
+          "accepted": 183,
+          "accepted_disagreements": 13,
+          "coverage": 0.9786096256684492,
+          "agreement": 0.9289617486338798
+        },
+        {
+          "label": "news_query",
+          "count": 141,
+          "accepted": 135,
+          "accepted_disagreements": 11,
+          "coverage": 0.9574468085106383,
+          "agreement": 0.9185185185185185
+        }
+      ],
+      "labels_never_accepted": 0
+    }
+  },
+  "environment": {
+    "python": "3.13.5",
+    "machine": "arm64",
+    "system": "Darwin",
+    "processor": "arm",
+    "packages": {
+      "callswap": "0.1.0",
+      "scikit-learn": "1.9.1",
+      "numpy": "2.5.4",
+      "scipy": "1.18.1",
+      "sentence-transformers": "6.2.0",
+      "torch": "2.15.0",
+      "transformers": "5.22.2"
+    }
+  }
+}

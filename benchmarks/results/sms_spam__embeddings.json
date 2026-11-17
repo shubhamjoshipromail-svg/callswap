@@ -1,0 +1,148 @@
+{
+  "dataset": "sms_spam",
+  "title": "SMS Spam Collection",
+  "model": "embeddings",
+  "teacher": "gold labels (stand-in)",
+  "data_sha256": "f40901bcf4620b7c7762e65c7eedd83d29d4c79b12847ffec938c519949b165f",
+  "rows": 5574,
+  "labels": 2,
+  "duplicate_rows": 415,
+  "teacher_inconsistency_rows": 0,
+  "split": {
+    "train": 3346,
+    "calibration": 1114,
+    "sealed": 1114
+  },
+  "sealed_rows": 1114,
+  "seed": 7,
+  "min_coverage": 0.7,
+  "overall_accuracy": 0.9730700179533214,
+  "latency_ms": {
+    "p50": 9.14756249403581,
+    "p95": 10.414827095519286,
+    "samples": 100
+  },
+  "labels_unproven": 0,
+  "train_seconds": 5.319570374995237,
+  "training": {
+    "winner": "embeddings",
+    "selection_method": "single_candidate",
+    "candidates": [
+      "embeddings"
+    ],
+    "train_rows": 3346
+  },
+  "bars": {
+    "0.99": {
+      "verdict": "PASS",
+      "fail_reasons": [],
+      "coverage": 0.8258527827648114,
+      "agreement": 0.9967391304347826,
+      "agreement_lower_bound": 0.9904568389813455,
+      "accepted": 920,
+      "threshold": 0.9757404923439026,
+      "temperature": 0.6488668390818363,
+      "target_met_on_calibration": true,
+      "calls_saved_per_1000": 825.8527827648114,
+      "monthly_saving_at_defaults": 1218.7791741472172,
+      "weakest_labels": [
+        {
+          "label": "spam",
+          "count": 149,
+          "accepted": 54,
+          "accepted_disagreements": 3,
+          "coverage": 0.3624161073825503,
+          "agreement": 0.9444444444444444
+        },
+        {
+          "label": "ham",
+          "count": 965,
+          "accepted": 866,
+          "accepted_disagreements": 0,
+          "coverage": 0.8974093264248705,
+          "agreement": 1.0
+        }
+      ],
+      "labels_never_accepted": 0
+    },
+    "0.95": {
+      "verdict": "PASS",
+      "fail_reasons": [],
+      "coverage": 0.9991023339317774,
+      "agreement": 0.9739442946990117,
+      "agreement_lower_bound": 0.962830308190155,
+      "accepted": 1113,
+      "threshold": 0.5081854462623596,
+      "temperature": 0.6488668390818363,
+      "target_met_on_calibration": true,
+      "calls_saved_per_1000": 999.1023339317774,
+      "monthly_saving_at_defaults": 1478.6535008976662,
+      "weakest_labels": [
+        {
+          "label": "spam",
+          "count": 149,
+          "accepted": 148,
+          "accepted_disagreements": 26,
+          "coverage": 0.9932885906040269,
+          "agreement": 0.8243243243243243
+        },
+        {
+          "label": "ham",
+          "count": 965,
+          "accepted": 965,
+          "accepted_disagreements": 3,
+          "coverage": 1.0,
+          "agreement": 0.9968911917098445
+        }
+      ],
+      "labels_never_accepted": 0
+    },
+    "0.90": {
+      "verdict": "PASS",
+      "fail_reasons": [],
+      "coverage": 0.9991023339317774,
+      "agreement": 0.9739442946990117,
+      "agreement_lower_bound": 0.962830308190155,
+      "accepted": 1113,
+      "threshold": 0.5081854462623596,
+      "temperature": 0.6488668390818363,
+      "target_met_on_calibration": true,
+      "calls_saved_per_1000": 999.1023339317774,
+      "monthly_saving_at_defaults": 1478.6535008976662,
+      "weakest_labels": [
+        {
+          "label": "spam",
+          "count": 149,
+          "accepted": 148,
+          "accepted_disagreements": 26,
+          "coverage": 0.9932885906040269,
+          "agreement": 0.8243243243243243
+        },
+        {
+          "label": "ham",
+          "count": 965,
+          "accepted": 965,
+          "accepted_disagreements": 3,
+          "coverage": 1.0,
+          "agreement": 0.9968911917098445
+        }
+      ],
+      "labels_never_accepted": 0
+    }
+  },
+  "environment": {
+    "python": "3.13.5",
+    "machine": "arm64",
+    "system": "Darwin",
+    "processor": "arm",
+    "packages": {
+      "callswap": "0.1.0",
+      "scikit-learn": "1.9.1",
+      "numpy": "2.5.4",
+      "scipy": "1.18.1",
+      "sentence-transformers": "6.2.0",
+      "torch": "2.15.0",
+      "transformers": "5.22.2"
+    }
+  }
+}

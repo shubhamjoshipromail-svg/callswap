@@ -1,0 +1,153 @@
+{
+  "dataset": "sms_spam",
+  "title": "SMS Spam Collection",
+  "model": "finetune",
+  "teacher": "gold labels (stand-in)",
+  "data_sha256": "f40901bcf4620b7c7762e65c7eedd83d29d4c79b12847ffec938c519949b165f",
+  "rows": 5574,
+  "labels": 2,
+  "duplicate_rows": 415,
+  "teacher_inconsistency_rows": 0,
+  "split": {
+    "train": 3346,
+    "calibration": 1114,
+    "sealed": 1114
+  },
+  "sealed_rows": 1114,
+  "seed": 7,
+  "min_coverage": 0.7,
+  "overall_accuracy": 0.9919210053859964,
+  "latency_ms": {
+    "p50": 20.242062499164604,
+    "p95": 25.233470799139468,
+    "samples": 100
+  },
+  "labels_unproven": 0,
+  "train_seconds": 1009.7026075419999,
+  "training": {
+    "winner": "finetune",
+    "selection_method": "single_candidate",
+    "base_model": "answerdotai/ModernBERT-base",
+    "device": "mps",
+    "epochs_run": 4,
+    "max_length": 56,
+    "training_seconds": 1009.1322440829972,
+    "candidates": [
+      "finetune"
+    ],
+    "train_rows": 3346
+  },
+  "bars": {
+    "0.99": {
+      "verdict": "PASS",
+      "fail_reasons": [],
+      "coverage": 0.8725314183123878,
+      "agreement": 0.9989711934156379,
+      "agreement_lower_bound": 0.9941955590883387,
+      "accepted": 972,
+      "threshold": 0.97906494140625,
+      "temperature": 1.2385866558374319,
+      "target_met_on_calibration": true,
+      "calls_saved_per_1000": 872.5314183123878,
+      "monthly_saving_at_defaults": 1288.7971274685817,
+      "weakest_labels": [
+        {
+          "label": "spam",
+          "count": 149,
+          "accepted": 133,
+          "accepted_disagreements": 1,
+          "coverage": 0.8926174496644296,
+          "agreement": 0.9924812030075187
+        },
+        {
+          "label": "ham",
+          "count": 965,
+          "accepted": 839,
+          "accepted_disagreements": 0,
+          "coverage": 0.8694300518134715,
+          "agreement": 1.0
+        }
+      ],
+      "labels_never_accepted": 0
+    },
+    "0.95": {
+      "verdict": "PASS",
+      "fail_reasons": [],
+      "coverage": 1.0,
+      "agreement": 0.9919210053859964,
+      "agreement_lower_bound": 0.9847171837857337,
+      "accepted": 1114,
+      "threshold": 0.5009965300559998,
+      "temperature": 1.2385866558374319,
+      "target_met_on_calibration": true,
+      "calls_saved_per_1000": 1000.0,
+      "monthly_saving_at_defaults": 1480.0,
+      "weakest_labels": [
+        {
+          "label": "ham",
+          "count": 965,
+          "accepted": 965,
+          "accepted_disagreements": 7,
+          "coverage": 1.0,
+          "agreement": 0.9927461139896373
+        },
+        {
+          "label": "spam",
+          "count": 149,
+          "accepted": 149,
+          "accepted_disagreements": 2,
+          "coverage": 1.0,
+          "agreement": 0.9865771812080537
+        }
+      ],
+      "labels_never_accepted": 0
+    },
+    "0.90": {
+      "verdict": "PASS",
+      "fail_reasons": [],
+      "coverage": 1.0,
+      "agreement": 0.9919210053859964,
+      "agreement_lower_bound": 0.9847171837857337,
+      "accepted": 1114,
+      "threshold": 0.5009965300559998,
+      "temperature": 1.2385866558374319,
+      "target_met_on_calibration": true,
+      "calls_saved_per_1000": 1000.0,
+      "monthly_saving_at_defaults": 1480.0,
+      "weakest_labels": [
+        {
+          "label": "ham",
+          "count": 965,
+          "accepted": 965,
+          "accepted_disagreements": 7,
+          "coverage": 1.0,
+          "agreement": 0.9927461139896373
+        },
+        {
+          "label": "spam",
+          "count": 149,
+          "accepted": 149,
+          "accepted_disagreements": 2,
+          "coverage": 1.0,
+          "agreement": 0.9865771812080537
+        }
+      ],
+      "labels_never_accepted": 0
+    }
+  },
+  "environment": {
+    "python": "3.13.5",
+    "machine": "arm64",
+    "system": "Darwin",
+    "processor": "arm",
+    "packages": {
+      "callswap": "0.1.0",
+      "scikit-learn": "1.9.1",
+      "numpy": "2.5.4",
+      "scipy": "1.18.1",
+      "sentence-transformers": "6.2.0",
+      "torch": "2.15.0",
+      "transformers": "5.22.2"
+    }
+  }
+}

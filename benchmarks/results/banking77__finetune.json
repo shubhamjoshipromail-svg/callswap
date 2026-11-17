@@ -1,0 +1,227 @@
+{
+  "dataset": "banking77",
+  "title": "Banking77",
+  "model": "finetune",
+  "teacher": "gold labels (stand-in)",
+  "data_sha256": "d3ee6ad5b264d0897747d93edd291b0837da402f544fb4950d4e3d8db41b24ef",
+  "rows": 13083,
+  "labels": 77,
+  "duplicate_rows": 12,
+  "teacher_inconsistency_rows": 0,
+  "split": {
+    "train": 7883,
+    "calibration": 2614,
+    "sealed": 2586
+  },
+  "sealed_rows": 2586,
+  "seed": 7,
+  "min_coverage": 0.7,
+  "overall_accuracy": 0.9207269914926527,
+  "latency_ms": {
+    "p50": 20.84825050405925,
+    "p95": 25.950870540691536,
+    "samples": 100
+  },
+  "labels_unproven": 3,
+  "train_seconds": 2513.3613929580024,
+  "training": {
+    "winner": "finetune",
+    "selection_method": "single_candidate",
+    "base_model": "answerdotai/ModernBERT-base",
+    "device": "mps",
+    "epochs_run": 6,
+    "max_length": 40,
+    "training_seconds": 2512.914127415992,
+    "candidates": [
+      "finetune"
+    ],
+    "train_rows": 7883
+  },
+  "bars": {
+    "0.99": {
+      "verdict": "FAIL",
+      "fail_reasons": [
+        "coverage 39.7% is below the minimum 70%"
+      ],
+      "coverage": 0.39675174013921116,
+      "agreement": 0.9980506822612085,
+      "agreement_lower_bound": 0.9929204972756719,
+      "accepted": 1026,
+      "threshold": 0.9951329827308655,
+      "temperature": 1.1084351850074667,
+      "target_met_on_calibration": true,
+      "calls_saved_per_1000": 396.75174013921117,
+      "monthly_saving_at_defaults": 575.1276102088167,
+      "weakest_labels": [
+        {
+          "label": "top_up_by_bank_transfer_charge",
+          "count": 30,
+          "accepted": 10,
+          "accepted_disagreements": 1,
+          "coverage": 0.3333333333333333,
+          "agreement": 0.9
+        },
+        {
+          "label": "virtual_card_not_working",
+          "count": 16,
+          "accepted": 6,
+          "accepted_disagreements": 1,
+          "coverage": 0.375,
+          "agreement": 0.8333333333333334
+        },
+        {
+          "label": "card_acceptance",
+          "count": 19,
+          "accepted": 1,
+          "accepted_disagreements": 0,
+          "coverage": 0.05263157894736842,
+          "agreement": 1.0
+        },
+        {
+          "label": "card_payment_not_recognised",
+          "count": 41,
+          "accepted": 3,
+          "accepted_disagreements": 0,
+          "coverage": 0.07317073170731707,
+          "agreement": 1.0
+        },
+        {
+          "label": "lost_or_stolen_card",
+          "count": 24,
+          "accepted": 3,
+          "accepted_disagreements": 0,
+          "coverage": 0.125,
+          "agreement": 1.0
+        }
+      ],
+      "labels_never_accepted": 0
+    },
+    "0.95": {
+      "verdict": "PASS",
+      "fail_reasons": [],
+      "coverage": 0.9068058778035576,
+      "agreement": 0.9650319829424308,
+      "agreement_lower_bound": 0.9568036552378616,
+      "accepted": 2345,
+      "threshold": 0.6758788228034973,
+      "temperature": 1.1084351850074667,
+      "target_met_on_calibration": true,
+      "calls_saved_per_1000": 906.8058778035576,
+      "monthly_saving_at_defaults": 1340.2088167053364,
+      "weakest_labels": [
+        {
+          "label": "transfer_not_received_by_recipient",
+          "count": 42,
+          "accepted": 31,
+          "accepted_disagreements": 4,
+          "coverage": 0.7380952380952381,
+          "agreement": 0.8709677419354839
+        },
+        {
+          "label": "wrong_exchange_rate_for_cash_withdrawal",
+          "count": 40,
+          "accepted": 37,
+          "accepted_disagreements": 4,
+          "coverage": 0.925,
+          "agreement": 0.8918918918918919
+        },
+        {
+          "label": "disposable_card_limits",
+          "count": 32,
+          "accepted": 31,
+          "accepted_disagreements": 4,
+          "coverage": 0.96875,
+          "agreement": 0.8709677419354839
+        },
+        {
+          "label": "beneficiary_not_allowed",
+          "count": 39,
+          "accepted": 32,
+          "accepted_disagreements": 3,
+          "coverage": 0.8205128205128205,
+          "agreement": 0.90625
+        },
+        {
+          "label": "top_up_reverted",
+          "count": 37,
+          "accepted": 32,
+          "accepted_disagreements": 3,
+          "coverage": 0.8648648648648649,
+          "agreement": 0.90625
+        }
+      ],
+      "labels_never_accepted": 0
+    },
+    "0.90": {
+      "verdict": "PASS",
+      "fail_reasons": [],
+      "coverage": 0.9996133023975251,
+      "agreement": 0.921083172147002,
+      "agreement_lower_bound": 0.9100540158427549,
+      "accepted": 2585,
+      "threshold": 0.13167840242385864,
+      "temperature": 1.1084351850074667,
+      "target_met_on_calibration": true,
+      "calls_saved_per_1000": 999.6133023975251,
+      "monthly_saving_at_defaults": 1479.4199535962878,
+      "weakest_labels": [
+        {
+          "label": "transfer_not_received_by_recipient",
+          "count": 42,
+          "accepted": 42,
+          "accepted_disagreements": 9,
+          "coverage": 1.0,
+          "agreement": 0.7857142857142857
+        },
+        {
+          "label": "beneficiary_not_allowed",
+          "count": 39,
+          "accepted": 39,
+          "accepted_disagreements": 8,
+          "coverage": 1.0,
+          "agreement": 0.7948717948717948
+        },
+        {
+          "label": "card_payment_fee_charged",
+          "count": 45,
+          "accepted": 45,
+          "accepted_disagreements": 7,
+          "coverage": 1.0,
+          "agreement": 0.8444444444444444
+        },
+        {
+          "label": "pending_transfer",
+          "count": 37,
+          "accepted": 37,
+          "accepted_disagreements": 7,
+          "coverage": 1.0,
+          "agreement": 0.8108108108108109
+        },
+        {
+          "label": "top_up_reverted",
+          "count": 37,
+          "accepted": 37,
+          "accepted_disagreements": 7,
+          "coverage": 1.0,
+          "agreement": 0.8108108108108109
+        }
+      ],
+      "labels_never_accepted": 0
+    }
+  },
+  "environment": {
+    "python": "3.13.5",
+    "machine": "arm64",
+    "system": "Darwin",
+    "processor": "arm",
+    "packages": {
+      "callswap": "0.1.0",
+      "scikit-learn": "1.9.1",
+      "numpy": "2.5.4",
+      "scipy": "1.18.1",
+      "sentence-transformers": "6.2.0",
+      "torch": "2.15.0",
+      "transformers": "5.22.2"
+    }
+  }
+}

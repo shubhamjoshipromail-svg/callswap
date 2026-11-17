@@ -1,0 +1,150 @@
+{
+  "dataset": "sms_spam",
+  "title": "SMS Spam Collection",
+  "model": "tfidf",
+  "teacher": "gold labels (stand-in)",
+  "data_sha256": "f40901bcf4620b7c7762e65c7eedd83d29d4c79b12847ffec938c519949b165f",
+  "rows": 5574,
+  "labels": 2,
+  "duplicate_rows": 415,
+  "teacher_inconsistency_rows": 0,
+  "split": {
+    "train": 3346,
+    "calibration": 1114,
+    "sealed": 1114
+  },
+  "sealed_rows": 1114,
+  "seed": 7,
+  "min_coverage": 0.7,
+  "overall_accuracy": 0.9721723518850988,
+  "latency_ms": {
+    "p50": 0.979041498794686,
+    "p95": 1.5448996447958052,
+    "samples": 100
+  },
+  "labels_unproven": 0,
+  "train_seconds": 1.1313767090032343,
+  "training": {
+    "winner": "tfidf",
+    "selection_method": "single_candidate",
+    "candidates": [
+      "tfidf"
+    ],
+    "train_rows": 3346
+  },
+  "bars": {
+    "0.99": {
+      "verdict": "FAIL",
+      "fail_reasons": [
+        "coverage 69.0% is below the minimum 70%"
+      ],
+      "coverage": 0.6903052064631957,
+      "agreement": 0.9986996098829649,
+      "agreement_lower_bound": 0.9926711696448924,
+      "accepted": 769,
+      "threshold": 0.9889591299834349,
+      "temperature": 0.6119937886043991,
+      "target_met_on_calibration": true,
+      "calls_saved_per_1000": 690.3052064631958,
+      "monthly_saving_at_defaults": 1015.4578096947935,
+      "weakest_labels": [
+        {
+          "label": "spam",
+          "count": 149,
+          "accepted": 9,
+          "accepted_disagreements": 1,
+          "coverage": 0.06040268456375839,
+          "agreement": 0.8888888888888888
+        },
+        {
+          "label": "ham",
+          "count": 965,
+          "accepted": 760,
+          "accepted_disagreements": 0,
+          "coverage": 0.7875647668393783,
+          "agreement": 1.0
+        }
+      ],
+      "labels_never_accepted": 0
+    },
+    "0.95": {
+      "verdict": "PASS",
+      "fail_reasons": [],
+      "coverage": 1.0,
+      "agreement": 0.9721723518850988,
+      "agreement_lower_bound": 0.9607721375213867,
+      "accepted": 1114,
+      "threshold": 0.5000464233652232,
+      "temperature": 0.6119937886043991,
+      "target_met_on_calibration": true,
+      "calls_saved_per_1000": 1000.0,
+      "monthly_saving_at_defaults": 1480.0,
+      "weakest_labels": [
+        {
+          "label": "spam",
+          "count": 149,
+          "accepted": 149,
+          "accepted_disagreements": 31,
+          "coverage": 1.0,
+          "agreement": 0.7919463087248322
+        },
+        {
+          "label": "ham",
+          "count": 965,
+          "accepted": 965,
+          "accepted_disagreements": 0,
+          "coverage": 1.0,
+          "agreement": 1.0
+        }
+      ],
+      "labels_never_accepted": 0
+    },
+    "0.90": {
+      "verdict": "PASS",
+      "fail_reasons": [],
+      "coverage": 1.0,
+      "agreement": 0.9721723518850988,
+      "agreement_lower_bound": 0.9607721375213867,
+      "accepted": 1114,
+      "threshold": 0.5000464233652232,
+      "temperature": 0.6119937886043991,
+      "target_met_on_calibration": true,
+      "calls_saved_per_1000": 1000.0,
+      "monthly_saving_at_defaults": 1480.0,
+      "weakest_labels": [
+        {
+          "label": "spam",
+          "count": 149,
+          "accepted": 149,
+          "accepted_disagreements": 31,
+          "coverage": 1.0,
+          "agreement": 0.7919463087248322
+        },
+        {
+          "label": "ham",
+          "count": 965,
+          "accepted": 965,
+          "accepted_disagreements": 0,
+          "coverage": 1.0,
+          "agreement": 1.0
+        }
+      ],
+      "labels_never_accepted": 0
+    }
+  },
+  "environment": {
+    "python": "3.13.5",
+    "machine": "arm64",
+    "system": "Darwin",
+    "processor": "arm",
+    "packages": {
+      "callswap": "0.1.0",
+      "scikit-learn": "1.9.1",
+      "numpy": "2.5.4",
+      "scipy": "1.18.1",
+      "sentence-transformers": "6.2.0",
+      "torch": "2.15.0",
+      "transformers": "5.22.2"
+    }
+  }
+}

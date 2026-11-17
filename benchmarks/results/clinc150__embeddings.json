@@ -1,0 +1,222 @@
+{
+  "dataset": "clinc150",
+  "title": "CLINC150",
+  "model": "embeddings",
+  "teacher": "gold labels (stand-in)",
+  "data_sha256": "72dcbc90fd4987c5dae34bab91b3c23d8ecf542014f2ca96dd8e3b68f3f5173b",
+  "rows": 23700,
+  "labels": 151,
+  "duplicate_rows": 5,
+  "teacher_inconsistency_rows": 8,
+  "split": {
+    "train": 14224,
+    "calibration": 4740,
+    "sealed": 4736
+  },
+  "sealed_rows": 4736,
+  "seed": 7,
+  "min_coverage": 0.7,
+  "overall_accuracy": 0.9379222972972973,
+  "latency_ms": {
+    "p50": 7.522521002101712,
+    "p95": 8.418551755312363,
+    "samples": 100
+  },
+  "labels_unproven": 0,
+  "train_seconds": 10.24398304100032,
+  "training": {
+    "winner": "embeddings",
+    "selection_method": "single_candidate",
+    "candidates": [
+      "embeddings"
+    ],
+    "train_rows": 14224
+  },
+  "bars": {
+    "0.99": {
+      "verdict": "PASS",
+      "fail_reasons": [],
+      "coverage": 0.7584459459459459,
+      "agreement": 0.9941536748329621,
+      "agreement_lower_bound": 0.9910786444593555,
+      "accepted": 3592,
+      "threshold": 0.9615313410758972,
+      "temperature": 0.43340910240213865,
+      "target_met_on_calibration": true,
+      "calls_saved_per_1000": 758.4459459459459,
+      "monthly_saving_at_defaults": 1117.668918918919,
+      "weakest_labels": [
+        {
+          "label": "oos",
+          "count": 240,
+          "accepted": 126,
+          "accepted_disagreements": 4,
+          "coverage": 0.525,
+          "agreement": 0.9682539682539683
+        },
+        {
+          "label": "how_old_are_you",
+          "count": 29,
+          "accepted": 23,
+          "accepted_disagreements": 2,
+          "coverage": 0.7931034482758621,
+          "agreement": 0.9130434782608695
+        },
+        {
+          "label": "change_ai_name",
+          "count": 30,
+          "accepted": 4,
+          "accepted_disagreements": 1,
+          "coverage": 0.13333333333333333,
+          "agreement": 0.75
+        },
+        {
+          "label": "change_user_name",
+          "count": 30,
+          "accepted": 5,
+          "accepted_disagreements": 1,
+          "coverage": 0.16666666666666666,
+          "agreement": 0.8
+        },
+        {
+          "label": "order",
+          "count": 30,
+          "accepted": 12,
+          "accepted_disagreements": 1,
+          "coverage": 0.4,
+          "agreement": 0.9166666666666666
+        }
+      ],
+      "labels_never_accepted": 0
+    },
+    "0.95": {
+      "verdict": "FAIL",
+      "fail_reasons": [
+        "agreement lower bound 94.38% is below the target 95%"
+      ],
+      "coverage": 0.980152027027027,
+      "agreement": 0.950452391210685,
+      "agreement_lower_bound": 0.9438287117514038,
+      "accepted": 4642,
+      "threshold": 0.4722692668437958,
+      "temperature": 0.43340910240213865,
+      "target_met_on_calibration": true,
+      "calls_saved_per_1000": 980.152027027027,
+      "monthly_saving_at_defaults": 1450.2280405405404,
+      "weakest_labels": [
+        {
+          "label": "oos",
+          "count": 240,
+          "accepted": 222,
+          "accepted_disagreements": 37,
+          "coverage": 0.925,
+          "agreement": 0.8333333333333334
+        },
+        {
+          "label": "change_ai_name",
+          "count": 30,
+          "accepted": 25,
+          "accepted_disagreements": 11,
+          "coverage": 0.8333333333333334,
+          "agreement": 0.56
+        },
+        {
+          "label": "order",
+          "count": 30,
+          "accepted": 29,
+          "accepted_disagreements": 8,
+          "coverage": 0.9666666666666667,
+          "agreement": 0.7241379310344828
+        },
+        {
+          "label": "no",
+          "count": 30,
+          "accepted": 28,
+          "accepted_disagreements": 5,
+          "coverage": 0.9333333333333333,
+          "agreement": 0.8214285714285714
+        },
+        {
+          "label": "reminder",
+          "count": 30,
+          "accepted": 29,
+          "accepted_disagreements": 5,
+          "coverage": 0.9666666666666667,
+          "agreement": 0.8275862068965517
+        }
+      ],
+      "labels_never_accepted": 0
+    },
+    "0.90": {
+      "verdict": "PASS",
+      "fail_reasons": [],
+      "coverage": 1.0,
+      "agreement": 0.9379222972972973,
+      "agreement_lower_bound": 0.9306888372173051,
+      "accepted": 4736,
+      "threshold": 0.17105413973331451,
+      "temperature": 0.43340910240213865,
+      "target_met_on_calibration": true,
+      "calls_saved_per_1000": 1000.0,
+      "monthly_saving_at_defaults": 1480.0,
+      "weakest_labels": [
+        {
+          "label": "oos",
+          "count": 240,
+          "accepted": 240,
+          "accepted_disagreements": 47,
+          "coverage": 1.0,
+          "agreement": 0.8041666666666667
+        },
+        {
+          "label": "change_ai_name",
+          "count": 30,
+          "accepted": 30,
+          "accepted_disagreements": 14,
+          "coverage": 1.0,
+          "agreement": 0.5333333333333333
+        },
+        {
+          "label": "order",
+          "count": 30,
+          "accepted": 30,
+          "accepted_disagreements": 8,
+          "coverage": 1.0,
+          "agreement": 0.7333333333333333
+        },
+        {
+          "label": "no",
+          "count": 30,
+          "accepted": 30,
+          "accepted_disagreements": 7,
+          "coverage": 1.0,
+          "agreement": 0.7666666666666667
+        },
+        {
+          "label": "reminder",
+          "count": 30,
+          "accepted": 30,
+          "accepted_disagreements": 6,
+          "coverage": 1.0,
+          "agreement": 0.8
+        }
+      ],
+      "labels_never_accepted": 0
+    }
+  },
+  "environment": {
+    "python": "3.13.5",
+    "machine": "arm64",
+    "system": "Darwin",
+    "processor": "arm",
+    "packages": {
+      "callswap": "0.1.0",
+      "scikit-learn": "1.9.1",
+      "numpy": "2.5.4",
+      "scipy": "1.18.1",
+      "sentence-transformers": "6.2.0",
+      "torch": "2.15.0",
+      "transformers": "5.22.2"
+    }
+  }
+}

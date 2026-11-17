@@ -1,0 +1,226 @@
+{
+  "dataset": "clinc150",
+  "title": "CLINC150",
+  "model": "tfidf",
+  "teacher": "gold labels (stand-in)",
+  "data_sha256": "72dcbc90fd4987c5dae34bab91b3c23d8ecf542014f2ca96dd8e3b68f3f5173b",
+  "rows": 23700,
+  "labels": 151,
+  "duplicate_rows": 5,
+  "teacher_inconsistency_rows": 8,
+  "split": {
+    "train": 14224,
+    "calibration": 4740,
+    "sealed": 4736
+  },
+  "sealed_rows": 4736,
+  "seed": 7,
+  "min_coverage": 0.7,
+  "overall_accuracy": 0.8997043918918919,
+  "latency_ms": {
+    "p50": 0.8715209987713024,
+    "p95": 0.9450097990338691,
+    "samples": 100
+  },
+  "labels_unproven": 0,
+  "train_seconds": 59.501578499999596,
+  "training": {
+    "winner": "tfidf",
+    "selection_method": "single_candidate",
+    "candidates": [
+      "tfidf"
+    ],
+    "train_rows": 14224
+  },
+  "bars": {
+    "0.99": {
+      "verdict": "FAIL",
+      "fail_reasons": [
+        "coverage 56.0% is below the minimum 70%"
+      ],
+      "coverage": 0.5597550675675675,
+      "agreement": 0.993964541682384,
+      "agreement_lower_bound": 0.990218086267661,
+      "accepted": 2651,
+      "threshold": 0.9881517123741467,
+      "temperature": 0.4665643753828294,
+      "target_met_on_calibration": true,
+      "calls_saved_per_1000": 559.7550675675675,
+      "monthly_saving_at_defaults": 819.6326013513514,
+      "weakest_labels": [
+        {
+          "label": "oos",
+          "count": 240,
+          "accepted": 69,
+          "accepted_disagreements": 3,
+          "coverage": 0.2875,
+          "agreement": 0.9565217391304348
+        },
+        {
+          "label": "yes",
+          "count": 30,
+          "accepted": 11,
+          "accepted_disagreements": 2,
+          "coverage": 0.36666666666666664,
+          "agreement": 0.8181818181818182
+        },
+        {
+          "label": "restaurant_suggestion",
+          "count": 30,
+          "accepted": 8,
+          "accepted_disagreements": 1,
+          "coverage": 0.26666666666666666,
+          "agreement": 0.875
+        },
+        {
+          "label": "maybe",
+          "count": 30,
+          "accepted": 10,
+          "accepted_disagreements": 1,
+          "coverage": 0.3333333333333333,
+          "agreement": 0.9
+        },
+        {
+          "label": "who_made_you",
+          "count": 30,
+          "accepted": 10,
+          "accepted_disagreements": 1,
+          "coverage": 0.3333333333333333,
+          "agreement": 0.9
+        }
+      ],
+      "labels_never_accepted": 0
+    },
+    "0.95": {
+      "verdict": "FAIL",
+      "fail_reasons": [
+        "agreement lower bound 94.03% is below the target 95%"
+      ],
+      "coverage": 0.8918918918918919,
+      "agreement": 0.9474431818181818,
+      "agreement_lower_bound": 0.9402979991623429,
+      "accepted": 4224,
+      "threshold": 0.6736566856389821,
+      "temperature": 0.4665643753828294,
+      "target_met_on_calibration": true,
+      "calls_saved_per_1000": 891.8918918918919,
+      "monthly_saving_at_defaults": 1317.837837837838,
+      "weakest_labels": [
+        {
+          "label": "oos",
+          "count": 240,
+          "accepted": 197,
+          "accepted_disagreements": 12,
+          "coverage": 0.8208333333333333,
+          "agreement": 0.9390862944162437
+        },
+        {
+          "label": "play_music",
+          "count": 30,
+          "accepted": 27,
+          "accepted_disagreements": 7,
+          "coverage": 0.9,
+          "agreement": 0.7407407407407407
+        },
+        {
+          "label": "goodbye",
+          "count": 30,
+          "accepted": 24,
+          "accepted_disagreements": 6,
+          "coverage": 0.8,
+          "agreement": 0.75
+        },
+        {
+          "label": "yes",
+          "count": 30,
+          "accepted": 24,
+          "accepted_disagreements": 6,
+          "coverage": 0.8,
+          "agreement": 0.75
+        },
+        {
+          "label": "new_card",
+          "count": 30,
+          "accepted": 29,
+          "accepted_disagreements": 6,
+          "coverage": 0.9666666666666667,
+          "agreement": 0.7931034482758621
+        }
+      ],
+      "labels_never_accepted": 0
+    },
+    "0.90": {
+      "verdict": "FAIL",
+      "fail_reasons": [
+        "agreement lower bound 89.49% is below the target 90%"
+      ],
+      "coverage": 0.9953547297297297,
+      "agreement": 0.903691132795927,
+      "agreement_lower_bound": 0.8949378097738595,
+      "accepted": 4714,
+      "threshold": 0.2389886684831137,
+      "temperature": 0.4665643753828294,
+      "target_met_on_calibration": true,
+      "calls_saved_per_1000": 995.3547297297297,
+      "monthly_saving_at_defaults": 1473.0320945945946,
+      "weakest_labels": [
+        {
+          "label": "oos",
+          "count": 240,
+          "accepted": 238,
+          "accepted_disagreements": 28,
+          "coverage": 0.9916666666666667,
+          "agreement": 0.8823529411764706
+        },
+        {
+          "label": "goodbye",
+          "count": 30,
+          "accepted": 30,
+          "accepted_disagreements": 10,
+          "coverage": 1.0,
+          "agreement": 0.6666666666666666
+        },
+        {
+          "label": "current_location",
+          "count": 30,
+          "accepted": 30,
+          "accepted_disagreements": 9,
+          "coverage": 1.0,
+          "agreement": 0.7
+        },
+        {
+          "label": "yes",
+          "count": 30,
+          "accepted": 30,
+          "accepted_disagreements": 9,
+          "coverage": 1.0,
+          "agreement": 0.7
+        },
+        {
+          "label": "play_music",
+          "count": 30,
+          "accepted": 30,
+          "accepted_disagreements": 8,
+          "coverage": 1.0,
+          "agreement": 0.7333333333333333
+        }
+      ],
+      "labels_never_accepted": 0
+    }
+  },
+  "environment": {
+    "python": "3.13.5",
+    "machine": "arm64",
+    "system": "Darwin",
+    "processor": "arm",
+    "packages": {
+      "callswap": "0.1.0",
+      "scikit-learn": "1.9.1",
+      "numpy": "2.5.4",
+      "scipy": "1.18.1",
+      "sentence-transformers": "6.2.0",
+      "torch": "2.15.0",
+      "transformers": "5.22.2"
+    }
+  }
+}

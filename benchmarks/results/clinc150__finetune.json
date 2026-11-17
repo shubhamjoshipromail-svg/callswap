@@ -1,0 +1,227 @@
+{
+  "dataset": "clinc150",
+  "title": "CLINC150",
+  "model": "finetune",
+  "teacher": "gold labels (stand-in)",
+  "data_sha256": "72dcbc90fd4987c5dae34bab91b3c23d8ecf542014f2ca96dd8e3b68f3f5173b",
+  "rows": 23700,
+  "labels": 151,
+  "duplicate_rows": 5,
+  "teacher_inconsistency_rows": 8,
+  "split": {
+    "train": 14224,
+    "calibration": 4740,
+    "sealed": 4736
+  },
+  "sealed_rows": 4736,
+  "seed": 7,
+  "min_coverage": 0.7,
+  "overall_accuracy": 0.9600929054054054,
+  "latency_ms": {
+    "p50": 19.695354494615458,
+    "p95": 25.0828672949865,
+    "samples": 100
+  },
+  "labels_unproven": 0,
+  "train_seconds": 2255.583193167011,
+  "training": {
+    "winner": "finetune",
+    "selection_method": "single_candidate",
+    "base_model": "answerdotai/ModernBERT-base",
+    "device": "mps",
+    "epochs_run": 6,
+    "max_length": 24,
+    "training_seconds": 2255.413725958002,
+    "candidates": [
+      "finetune"
+    ],
+    "train_rows": 14224
+  },
+  "bars": {
+    "0.99": {
+      "verdict": "FAIL",
+      "fail_reasons": [
+        "agreement lower bound 98.84% is below the target 99%"
+      ],
+      "coverage": 0.9060388513513513,
+      "agreement": 0.991610347238406,
+      "agreement_lower_bound": 0.9884075924371951,
+      "accepted": 4291,
+      "threshold": 0.9143800139427185,
+      "temperature": 1.0176856512715966,
+      "target_met_on_calibration": true,
+      "calls_saved_per_1000": 906.0388513513514,
+      "monthly_saving_at_defaults": 1339.0582770270269,
+      "weakest_labels": [
+        {
+          "label": "oos",
+          "count": 240,
+          "accepted": 154,
+          "accepted_disagreements": 4,
+          "coverage": 0.6416666666666667,
+          "agreement": 0.974025974025974
+        },
+        {
+          "label": "change_ai_name",
+          "count": 30,
+          "accepted": 26,
+          "accepted_disagreements": 3,
+          "coverage": 0.8666666666666667,
+          "agreement": 0.8846153846153846
+        },
+        {
+          "label": "interest_rate",
+          "count": 30,
+          "accepted": 29,
+          "accepted_disagreements": 2,
+          "coverage": 0.9666666666666667,
+          "agreement": 0.9310344827586207
+        },
+        {
+          "label": "taxes",
+          "count": 30,
+          "accepted": 29,
+          "accepted_disagreements": 2,
+          "coverage": 0.9666666666666667,
+          "agreement": 0.9310344827586207
+        },
+        {
+          "label": "where_are_you_from",
+          "count": 30,
+          "accepted": 29,
+          "accepted_disagreements": 2,
+          "coverage": 0.9666666666666667,
+          "agreement": 0.9310344827586207
+        }
+      ],
+      "labels_never_accepted": 0
+    },
+    "0.95": {
+      "verdict": "PASS",
+      "fail_reasons": [],
+      "coverage": 1.0,
+      "agreement": 0.9600929054054054,
+      "agreement_lower_bound": 0.9541350840348422,
+      "accepted": 4736,
+      "threshold": 0.1516365259885788,
+      "temperature": 1.0176856512715966,
+      "target_met_on_calibration": true,
+      "calls_saved_per_1000": 1000.0,
+      "monthly_saving_at_defaults": 1480.0,
+      "weakest_labels": [
+        {
+          "label": "oos",
+          "count": 240,
+          "accepted": 240,
+          "accepted_disagreements": 36,
+          "coverage": 1.0,
+          "agreement": 0.85
+        },
+        {
+          "label": "current_location",
+          "count": 30,
+          "accepted": 30,
+          "accepted_disagreements": 6,
+          "coverage": 1.0,
+          "agreement": 0.8
+        },
+        {
+          "label": "change_ai_name",
+          "count": 30,
+          "accepted": 30,
+          "accepted_disagreements": 5,
+          "coverage": 1.0,
+          "agreement": 0.8333333333333334
+        },
+        {
+          "label": "goodbye",
+          "count": 30,
+          "accepted": 30,
+          "accepted_disagreements": 4,
+          "coverage": 1.0,
+          "agreement": 0.8666666666666667
+        },
+        {
+          "label": "report_fraud",
+          "count": 30,
+          "accepted": 30,
+          "accepted_disagreements": 4,
+          "coverage": 1.0,
+          "agreement": 0.8666666666666667
+        }
+      ],
+      "labels_never_accepted": 0
+    },
+    "0.90": {
+      "verdict": "PASS",
+      "fail_reasons": [],
+      "coverage": 1.0,
+      "agreement": 0.9600929054054054,
+      "agreement_lower_bound": 0.9541350840348422,
+      "accepted": 4736,
+      "threshold": 0.1516365259885788,
+      "temperature": 1.0176856512715966,
+      "target_met_on_calibration": true,
+      "calls_saved_per_1000": 1000.0,
+      "monthly_saving_at_defaults": 1480.0,
+      "weakest_labels": [
+        {
+          "label": "oos",
+          "count": 240,
+          "accepted": 240,
+          "accepted_disagreements": 36,
+          "coverage": 1.0,
+          "agreement": 0.85
+        },
+        {
+          "label": "current_location",
+          "count": 30,
+          "accepted": 30,
+          "accepted_disagreements": 6,
+          "coverage": 1.0,
+          "agreement": 0.8
+        },
+        {
+          "label": "change_ai_name",
+          "count": 30,
+          "accepted": 30,
+          "accepted_disagreements": 5,
+          "coverage": 1.0,
+          "agreement": 0.8333333333333334
+        },
+        {
+          "label": "goodbye",
+          "count": 30,
+          "accepted": 30,
+          "accepted_disagreements": 4,
+          "coverage": 1.0,
+          "agreement": 0.8666666666666667
+        },
+        {
+          "label": "report_fraud",
+          "count": 30,
+          "accepted": 30,
+          "accepted_disagreements": 4,
+          "coverage": 1.0,
+          "agreement": 0.8666666666666667
+        }
+      ],
+      "labels_never_accepted": 0
+    }
+  },
+  "environment": {
+    "python": "3.13.5",
+    "machine": "arm64",
+    "system": "Darwin",
+    "processor": "arm",
+    "packages": {
+      "callswap": "0.1.0",
+      "scikit-learn": "1.9.1",
+      "numpy": "2.5.4",
+      "scipy": "1.18.1",
+      "sentence-transformers": "6.2.0",
+      "torch": "2.15.0",
+      "transformers": "5.22.2"
+    }
+  }
+}

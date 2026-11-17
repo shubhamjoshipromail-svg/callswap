@@ -1,0 +1,21 @@
+# docker compose up        -> http://127.0.0.1:8000 (serves the bundled demo run until you train your own)
+# Configuration comes from the environment or a .env file next to this one (see .env.example).
+services:
+  callswap:
+    build: .
+    image: callswap:local
+    ports:
+      - "127.0.0.1:${CALLSWAP_PUBLISHED_PORT:-8000}:8000"
+    environment:
+      CALLSWAP_RUN_DIR: ${CALLSWAP_RUN_DIR:-/runs/demo}
+      CALLSWAP_SHADOW: ${CALLSWAP_SHADOW:-0}
+      TEACHER_URL: ${TEACHER_URL:-}
+      TEACHER_MODEL: ${TEACHER_MODEL:-}
+      TEACHER_API_KEY: ${TEACHER_API_KEY:-}
+    volumes:
+      - callswap-runs:/runs      # trained runs and requests.log persist here
+      - ./data:/data:ro          # put your logs here to train inside the container
+    restart: unless-stopped
+
+volumes:
+  callswap-runs:

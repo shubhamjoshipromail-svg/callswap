@@ -1,0 +1,222 @@
+{
+  "dataset": "banking77",
+  "title": "Banking77",
+  "model": "tfidf",
+  "teacher": "gold labels (stand-in)",
+  "data_sha256": "d3ee6ad5b264d0897747d93edd291b0837da402f544fb4950d4e3d8db41b24ef",
+  "rows": 13083,
+  "labels": 77,
+  "duplicate_rows": 12,
+  "teacher_inconsistency_rows": 0,
+  "split": {
+    "train": 7883,
+    "calibration": 2614,
+    "sealed": 2586
+  },
+  "sealed_rows": 2586,
+  "seed": 7,
+  "min_coverage": 0.7,
+  "overall_accuracy": 0.88553750966744,
+  "latency_ms": {
+    "p50": 1.2616879976121709,
+    "p95": 2.095918737904867,
+    "samples": 100
+  },
+  "labels_unproven": 3,
+  "train_seconds": 14.97256333300902,
+  "training": {
+    "winner": "tfidf",
+    "selection_method": "single_candidate",
+    "candidates": [
+      "tfidf"
+    ],
+    "train_rows": 7883
+  },
+  "bars": {
+    "0.99": {
+      "verdict": "FAIL",
+      "fail_reasons": [
+        "coverage 39.6% is below the minimum 70%"
+      ],
+      "coverage": 0.39636504253673627,
+      "agreement": 0.9990243902439024,
+      "agreement_lower_bound": 0.9944945343313443,
+      "accepted": 1025,
+      "threshold": 0.9950046169325116,
+      "temperature": 0.42007460439748234,
+      "target_met_on_calibration": false,
+      "calls_saved_per_1000": 396.36504253673627,
+      "monthly_saving_at_defaults": 574.5475638051043,
+      "weakest_labels": [
+        {
+          "label": "declined_card_payment",
+          "count": 38,
+          "accepted": 8,
+          "accepted_disagreements": 1,
+          "coverage": 0.21052631578947367,
+          "agreement": 0.875
+        },
+        {
+          "label": "virtual_card_not_working",
+          "count": 16,
+          "accepted": 0,
+          "accepted_disagreements": 0,
+          "coverage": 0.0,
+          "agreement": null
+        },
+        {
+          "label": "why_verify_identity",
+          "count": 32,
+          "accepted": 2,
+          "accepted_disagreements": 0,
+          "coverage": 0.0625,
+          "agreement": 1.0
+        },
+        {
+          "label": "pending_top_up",
+          "count": 37,
+          "accepted": 3,
+          "accepted_disagreements": 0,
+          "coverage": 0.08108108108108109,
+          "agreement": 1.0
+        },
+        {
+          "label": "card_swallowed",
+          "count": 20,
+          "accepted": 2,
+          "accepted_disagreements": 0,
+          "coverage": 0.1,
+          "agreement": 1.0
+        }
+      ],
+      "labels_never_accepted": 1
+    },
+    "0.95": {
+      "verdict": "PASS",
+      "fail_reasons": [],
+      "coverage": 0.811291569992266,
+      "agreement": 0.9623450905624404,
+      "agreement_lower_bound": 0.9533182020431963,
+      "accepted": 2098,
+      "threshold": 0.7659087041427186,
+      "temperature": 0.42007460439748234,
+      "target_met_on_calibration": true,
+      "calls_saved_per_1000": 811.2915699922661,
+      "monthly_saving_at_defaults": 1196.937354988399,
+      "weakest_labels": [
+        {
+          "label": "wrong_exchange_rate_for_cash_withdrawal",
+          "count": 40,
+          "accepted": 32,
+          "accepted_disagreements": 5,
+          "coverage": 0.8,
+          "agreement": 0.84375
+        },
+        {
+          "label": "pending_transfer",
+          "count": 37,
+          "accepted": 27,
+          "accepted_disagreements": 4,
+          "coverage": 0.7297297297297297,
+          "agreement": 0.8518518518518519
+        },
+        {
+          "label": "disposable_card_limits",
+          "count": 32,
+          "accepted": 28,
+          "accepted_disagreements": 4,
+          "coverage": 0.875,
+          "agreement": 0.8571428571428571
+        },
+        {
+          "label": "pending_cash_withdrawal",
+          "count": 36,
+          "accepted": 25,
+          "accepted_disagreements": 3,
+          "coverage": 0.6944444444444444,
+          "agreement": 0.88
+        },
+        {
+          "label": "top_up_by_cash_or_cheque",
+          "count": 30,
+          "accepted": 23,
+          "accepted_disagreements": 3,
+          "coverage": 0.7666666666666667,
+          "agreement": 0.8695652173913043
+        }
+      ],
+      "labels_never_accepted": 0
+    },
+    "0.90": {
+      "verdict": "PASS",
+      "fail_reasons": [],
+      "coverage": 0.9396751740139211,
+      "agreement": 0.9185185185185185,
+      "agreement_lower_bound": 0.9069692494917841,
+      "accepted": 2430,
+      "threshold": 0.4587722323192033,
+      "temperature": 0.42007460439748234,
+      "target_met_on_calibration": true,
+      "calls_saved_per_1000": 939.675174013921,
+      "monthly_saving_at_defaults": 1389.5127610208817,
+      "weakest_labels": [
+        {
+          "label": "top_up_reverted",
+          "count": 37,
+          "accepted": 37,
+          "accepted_disagreements": 9,
+          "coverage": 1.0,
+          "agreement": 0.7567567567567568
+        },
+        {
+          "label": "why_verify_identity",
+          "count": 32,
+          "accepted": 30,
+          "accepted_disagreements": 8,
+          "coverage": 0.9375,
+          "agreement": 0.7333333333333333
+        },
+        {
+          "label": "topping_up_by_card",
+          "count": 28,
+          "accepted": 25,
+          "accepted_disagreements": 7,
+          "coverage": 0.8928571428571429,
+          "agreement": 0.72
+        },
+        {
+          "label": "beneficiary_not_allowed",
+          "count": 39,
+          "accepted": 35,
+          "accepted_disagreements": 7,
+          "coverage": 0.8974358974358975,
+          "agreement": 0.8
+        },
+        {
+          "label": "unable_to_verify_identity",
+          "count": 28,
+          "accepted": 28,
+          "accepted_disagreements": 7,
+          "coverage": 1.0,
+          "agreement": 0.75
+        }
+      ],
+      "labels_never_accepted": 0
+    }
+  },
+  "environment": {
+    "python": "3.13.5",
+    "machine": "arm64",
+    "system": "Darwin",
+    "processor": "arm",
+    "packages": {
+      "callswap": "0.1.0",
+      "scikit-learn": "1.9.1",
+      "numpy": "2.5.4",
+      "scipy": "1.18.1",
+      "sentence-transformers": "6.2.0",
+      "torch": "2.15.0",
+      "transformers": "5.22.2"
+    }
+  }
+}

@@ -1,0 +1,45 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.11", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+      - run: pip install -e ".[dev]"
+      - run: ruff check .
+      - run: pytest -q
+      - name: Demo runs with no API key and no extras
+        run: callswap demo --out "$RUNNER_TEMP/demo"
+      - name: Results table is reproducible from the committed result files
+        run: python benchmarks/make_table.py --check
+
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker build -t callswap:ci .
+      - name: Container answers a request
+        run: |
+          docker run -d --name callswap -p 8000:8000 callswap:ci
+          for i in $(seq 1 60); do curl -sf http://127.0.0.1:8000/healthz && break; sleep 3; done
+          curl -sf http://127.0.0.1:8000/v1/chat/completions \
+            -H 'content-type: application/json' \
+            -d '{"model":"any","messages":[{"role":"user","content":"I lost my card, please block it"}]}' | tee response.json
+          python -c "import json; r = json.load(open('response.json')); assert r['choices'][0]['message']['content'], r"
+          docker logs callswap

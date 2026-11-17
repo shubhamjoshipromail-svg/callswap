@@ -1,0 +1,227 @@
+{
+  "dataset": "massive",
+  "title": "MASSIVE (en-US)",
+  "model": "embeddings",
+  "teacher": "gold labels (stand-in)",
+  "data_sha256": "59680485d1f1be424033f9d7a41676deac4c663d8b1ceeded694be9c3196738c",
+  "rows": 16521,
+  "labels": 60,
+  "duplicate_rows": 89,
+  "teacher_inconsistency_rows": 14,
+  "split": {
+    "train": 9936,
+    "calibration": 3305,
+    "sealed": 3280
+  },
+  "sealed_rows": 3280,
+  "seed": 7,
+  "min_coverage": 0.7,
+  "overall_accuracy": 0.8445121951219512,
+  "latency_ms": {
+    "p50": 7.781813001201954,
+    "p95": 8.443841945700115,
+    "samples": 100
+  },
+  "labels_unproven": 11,
+  "train_seconds": 71.76981679198798,
+  "training": {
+    "winner": "embeddings",
+    "selection_method": "single_candidate",
+    "candidates": [
+      "embeddings"
+    ],
+    "train_rows": 9936
+  },
+  "bars": {
+    "0.99": {
+      "verdict": "FAIL",
+      "fail_reasons": [
+        "coverage 11.7% is below the minimum 70%",
+        "agreement lower bound 98.54% is below the target 99%"
+      ],
+      "coverage": 0.11707317073170732,
+      "agreement": 0.9973958333333334,
+      "agreement_lower_bound": 0.9853983868469071,
+      "accepted": 384,
+      "threshold": 0.9962338805198669,
+      "temperature": 0.6292917205573763,
+      "target_met_on_calibration": false,
+      "calls_saved_per_1000": 117.07317073170732,
+      "monthly_saving_at_defaults": 155.609756097561,
+      "weakest_labels": [
+        {
+          "label": "general_quirky",
+          "count": 164,
+          "accepted": 5,
+          "accepted_disagreements": 1,
+          "coverage": 0.03048780487804878,
+          "agreement": 0.8
+        },
+        {
+          "label": "alarm_remove",
+          "count": 22,
+          "accepted": 0,
+          "accepted_disagreements": 0,
+          "coverage": 0.0,
+          "agreement": null
+        },
+        {
+          "label": "alarm_set",
+          "count": 50,
+          "accepted": 0,
+          "accepted_disagreements": 0,
+          "coverage": 0.0,
+          "agreement": null
+        },
+        {
+          "label": "audio_volume_down",
+          "count": 14,
+          "accepted": 0,
+          "accepted_disagreements": 0,
+          "coverage": 0.0,
+          "agreement": null
+        },
+        {
+          "label": "audio_volume_mute",
+          "count": 31,
+          "accepted": 0,
+          "accepted_disagreements": 0,
+          "coverage": 0.0,
+          "agreement": null
+        }
+      ],
+      "labels_never_accepted": 30
+    },
+    "0.95": {
+      "verdict": "FAIL",
+      "fail_reasons": [
+        "coverage 61.5% is below the minimum 70%"
+      ],
+      "coverage": 0.6146341463414634,
+      "agreement": 0.9657738095238095,
+      "agreement_lower_bound": 0.9569098595428505,
+      "accepted": 2016,
+      "threshold": 0.8796592354774475,
+      "temperature": 0.6292917205573763,
+      "target_met_on_calibration": true,
+      "calls_saved_per_1000": 614.6341463414634,
+      "monthly_saving_at_defaults": 901.951219512195,
+      "weakest_labels": [
+        {
+          "label": "general_quirky",
+          "count": 164,
+          "accepted": 57,
+          "accepted_disagreements": 11,
+          "coverage": 0.3475609756097561,
+          "agreement": 0.8070175438596491
+        },
+        {
+          "label": "qa_definition",
+          "count": 75,
+          "accepted": 51,
+          "accepted_disagreements": 4,
+          "coverage": 0.68,
+          "agreement": 0.9215686274509803
+        },
+        {
+          "label": "news_query",
+          "count": 141,
+          "accepted": 104,
+          "accepted_disagreements": 4,
+          "coverage": 0.7375886524822695,
+          "agreement": 0.9615384615384616
+        },
+        {
+          "label": "recommendation_events",
+          "count": 51,
+          "accepted": 23,
+          "accepted_disagreements": 3,
+          "coverage": 0.45098039215686275,
+          "agreement": 0.8695652173913043
+        },
+        {
+          "label": "transport_query",
+          "count": 62,
+          "accepted": 31,
+          "accepted_disagreements": 3,
+          "coverage": 0.5,
+          "agreement": 0.9032258064516129
+        }
+      ],
+      "labels_never_accepted": 3
+    },
+    "0.90": {
+      "verdict": "FAIL",
+      "fail_reasons": [
+        "agreement lower bound 89.68% is below the target 90%"
+      ],
+      "coverage": 0.8524390243902439,
+      "agreement": 0.9080829756795422,
+      "agreement_lower_bound": 0.896807000248586,
+      "accepted": 2796,
+      "threshold": 0.6105414628982544,
+      "temperature": 0.6292917205573763,
+      "target_met_on_calibration": true,
+      "calls_saved_per_1000": 852.4390243902438,
+      "monthly_saving_at_defaults": 1258.658536585366,
+      "weakest_labels": [
+        {
+          "label": "general_quirky",
+          "count": 164,
+          "accepted": 109,
+          "accepted_disagreements": 37,
+          "coverage": 0.6646341463414634,
+          "agreement": 0.6605504587155964
+        },
+        {
+          "label": "calendar_query",
+          "count": 158,
+          "accepted": 124,
+          "accepted_disagreements": 16,
+          "coverage": 0.7848101265822784,
+          "agreement": 0.8709677419354839
+        },
+        {
+          "label": "calendar_set",
+          "count": 230,
+          "accepted": 206,
+          "accepted_disagreements": 14,
+          "coverage": 0.8956521739130435,
+          "agreement": 0.9320388349514563
+        },
+        {
+          "label": "music_query",
+          "count": 43,
+          "accepted": 36,
+          "accepted_disagreements": 10,
+          "coverage": 0.8372093023255814,
+          "agreement": 0.7222222222222222
+        },
+        {
+          "label": "qa_factoid",
+          "count": 155,
+          "accepted": 138,
+          "accepted_disagreements": 10,
+          "coverage": 0.8903225806451613,
+          "agreement": 0.927536231884058
+        }
+      ],
+      "labels_never_accepted": 1
+    }
+  },
+  "environment": {
+    "python": "3.13.5",
+    "machine": "arm64",
+    "system": "Darwin",
+    "processor": "arm",
+    "packages": {
+      "callswap": "0.1.0",
+      "scikit-learn": "1.9.1",
+      "numpy": "2.5.4",
+      "scipy": "1.18.1",
+      "sentence-transformers": "6.2.0",
+      "torch": "2.15.0",
+      "transformers": "5.22.2"
+    }
+  }
+}
