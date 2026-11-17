@@ -147,6 +147,14 @@ train on the wrapped text.
 
 ### Docker
 
+Without cloning, from the published image:
+
+```bash
+docker run --rm -p 8000:8000 ghcr.io/shubhamjoshipromail-svg/callswap
+```
+
+Or from a clone:
+
 ```bash
 git clone https://github.com/shubhamjoshipromail-svg/callswap && cd callswap && docker compose up
 ```
